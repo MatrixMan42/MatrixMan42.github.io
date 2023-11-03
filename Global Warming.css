@@ -1,0 +1,43 @@
+.Listy {
+    width: 70%;
+}
+
+.Listy li {
+    margin-bottom: 25px;
+}
+
+.Liner {
+    border-top: solid black 1px;
+}
+
+.First {
+    display: flex;
+}
+
+.First img {
+    width: 100%;
+    margin-top: 25%;
+}
+
+@media screen and (max-width: 800px)
+{
+    .Listy {
+        Width: 100%;
+    }
+    
+    .Listy ul {
+        padding-left: 0;
+    }
+    
+    .Listy li {
+        list-style-type: none;
+    }
+    
+    .First {
+        flex-wrap: wrap;
+    }
+    
+    .First img {
+        margin-top: 10%;
+    }
+}

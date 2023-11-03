@@ -1,0 +1,189 @@
+body {
+    font-family: Arial; /* Changes the font everywhere on all pages to Arial */
+    line-height: 1.5em; /* Adjusts the line height to be 50% higher than normal */
+    margin: 0; /* Removes margin around webpage pages */
+    background-color: aliceblue; /* Changes the background colour */
+    display: flex; /* Makes whole website flexible, helps with overall display */
+    flex-direction: column; /* Changes the direction of flex, instead of matching things side by side they go downwards. Necessary to put the Header to the bottom when the webpage is shrunk */
+    
+    background-image: url(Images/PlantingLong.png); /* Adds background image */
+    background-repeat: repeat-x; /* Repeats background image across the x axis */
+    background-position: 600px 100px; /* Bumps background image down */
+}
+
+main {
+    margin-top: 340px; /* Bumps the main section down so it doesn't look cramped */
+}
+
+h1 {
+    font-size: 30px; /* Adjusts the size of h1 headings */
+}
+
+h3 {
+    font-size: 25px; /* Adjusts the size of h3 headings */
+}
+
+nav ul {
+    display: flex; /* Puts header segments next to each other */
+	list-style-type: none; /* Removes dot points next to the Header list items */
+	padding: 0; /* Gets rid of the ul padding */
+	margin: 0; /* Gets rid of the ul margin */
+	background-color: lightgreen; /* Changes the background colour to lightgreen */
+    box-shadow: 0 8px 8px #888888; /* Adds a box shadow, that's grey, and blurs */
+}
+
+nav li {
+    flex: auto; /* Spreads the flex items evenly, growing or shrinking them where appropriate */
+    border-bottom: 1px solid black; /* Adds a black border at the bottom of the Header */
+}
+
+nav p, nav a:link {
+    text-align: center; /* Centers text */
+    margin: 0; /* Removes margin around the link */
+    font-weight: bold; /* Makes the text bold */
+    color: black; /* Turns text from blue to black */
+    text-decoration: none; /* Removes underline */
+}
+
+nav li a {
+	display: block; /* Neatly organises elements in a block formation */
+	color: black; /* Changes colour of text to black */
+    font-size: 22px; /* Adjusts font size */
+    font-weight: bold; /* Adjusts font weight to bold */
+	padding: 2em .2em; /* Pads out header items, makes them vertically centered */
+}
+
+nav div {
+    display: flex; /* Makes items flexed */
+    justify-content: center; /* Centers the text horizontally */
+    align-items: center; /* Centers the text & logo vertically */
+    width: 15%; /* Helps spread out the text and logo in the header */
+    max-width: 8em; /* Maximum width the div can take up */
+    border-bottom: 1px solid black; /* Puts a black border at the bottom of the left div element */
+}
+
+nav img {
+    max-width: 75%; /* Stops the globe image from getting too big */
+}
+
+nav li a:hover {
+	background: green; /* Makes the header elements glow green when hovered over */
+}
+
+main {
+    margin-left: 10%; /* Pushes content over from the left 10% */
+    margin-right: 10%; /* Pushes content over from the right 10% */
+}
+
+footer {
+    background-color: orange; /* Changes colour of footer to orange */
+    margin-top: 50px; /* Adds space above the footer */
+    border-top: 1px solid black; /* Adds border to the top of footer */
+}
+
+footer p {
+    text-align: center; /* Centers the text, makes it more readable */
+}
+
+.FootSect {
+    display: flex; /* Places items next to each other */
+}
+
+.FootDiv {
+    display: flex; /* Flexes items */
+    flex-direction: column; /* Puts flex items on top of each other */
+    align-items: center; /* Center aligns flex items */
+    padding-left: 5%; /* Pushes items to the right */
+    padding-right 5%; /* Pushes items to the left */
+}
+
+.ImgDiv {
+    width: 75%; /* Sets the width of the image group to 75% */
+    max-width: 70em; /* Caps the max width of the image group */
+    padding-top: 10px; /* Pushes image group down slightly */
+}
+
+.FootDiv img {
+    width: 10%; /* Sets the width of the images to 10% */
+    min-width: 3em; /* Caps how small the images can be */
+    padding: 5px; /* Adds padding around images */
+    margin-left: 5%; /* Pushes images to the right */
+    margin-right: 5%; /* Pushes images to the left */
+}
+
+.FootDiv a {
+    text-decoration: none; /* Removes underline */
+    color: black; /* Turns text to black */
+}
+
+.FootHeading p {
+    font-weight: bold; /* Makes the footer headings bold */
+    font-size: 24px; /* Adjusts the font size of the footer headings */
+}
+
+.FootDiv a:hover {
+    color: aliceblue; /* Makes the email turn aliceblue when hovered over */
+}
+
+@media screen and (max-width: 800px) /* If the screen is smaller than 800px, do the following */
+{
+    body {
+        background-position: 0 0; /* Puts the background image up to the top */
+    }
+    
+    main {
+        margin-top: 340px; /* Increases the top margin size */
+    }
+    
+    header {
+        order: 1; /* Changes the order of the flex items, pushes header near the bottom */
+        border-top: 1px solid black; /* Adds border to the top of the header */
+    }
+    
+    nav ul {
+        flex-direction: column; /* Stacks header elements on top of each other */
+    }
+    
+    nav div {
+        width: 100%; /* Keeps globe image a consistent size */
+        align-self: center; /* Keeps the flex items centered */
+        border-bottom: 0; /* Removes the bottom border as it otherwise causes conflicts */
+    }
+    
+    nav li {
+        border-top: 1px solid black; /* Adds a border at the top of each list item */
+        border-bottom: 0; /* Removes border bottom */
+    }
+    
+    footer {
+        order: 2; /* Sticks the footer below the header */
+        margin-top: 0; /* Removes margin at the top */
+        padding: 0 5%; /* Adds padding to the left and right of the footer */
+    }
+    
+    .FootSect {
+        flex-direction: column; /* Makes flex items stack on top of each other */
+    }
+    
+    .FootDiv {
+        padding: 0; /* Removes padding */
+    }
+    .FootDiv img {
+        width: 25%; /* Makes images larger, only at 25% */
+    }
+    
+    .ImgDiv {
+        margin-left: 60px; /* Pushes the images to the right */
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px)
+{
+    nav ul {
+        flex-wrap: wrap; /* Allows the header to wrap */
+    }
+    
+    main {
+        margin-top: 250px; /* Pushes text further up */
+    }
+}

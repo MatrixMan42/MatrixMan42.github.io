@@ -1,0 +1,56 @@
+.Sector {
+    margin-top: 100px;
+    display: flex
+}
+
+.ReverseSector {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.2s;
+    min-width: 20em;
+    width: 100%;
+    height: auto;
+    margin: 5px;
+    margin-top: 30px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.Texter {
+    margin-right: 75px;
+}
+
+.ReverseTexter {
+    margin-left: 75px;
+}
+
+.container ul li {
+    padding-bottom: 40px;
+}
+
+@media screen and (max-width: 800px)
+{
+    .Sector, .ReverseSector {
+        flex-wrap: wrap;
+    }
+    
+    .Texter, .ReverseTexter {
+        margin: 0;
+    }
+    
+    .ReverseSector {
+        padding-bottom: 150px;
+    }
+}
